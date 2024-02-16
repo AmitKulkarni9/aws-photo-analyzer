@@ -18,7 +18,7 @@ import { fromCognitoIdentityPool } from "@aws-sdk/credential-provider-cognito-id
 import { SESClient } from "@aws-sdk/client-ses";
 
 const REGION = "us-east-1";
-const IDENTITY_POOL_ID = "us-east-1:3f4987bd-541d-4ef6-aa4e-343abc1f98d1"; // An Amazon Cognito Identity Pool ID.
+const IDENTITY_POOL_ID = "Cognito Identity Pool ID"; // An Amazon Cognito Identity Pool ID.
 
 // Create an Amazon SES service client object.
 const sesClient = new SESClient({

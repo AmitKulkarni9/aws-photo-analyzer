@@ -27,9 +27,9 @@ import { sesClient } from "../libs/sesClient.js";
 import { GetIdentityMailFromDomainAttributesCommand, SendEmailCommand } from "@aws-sdk/client-ses";
 
 // Set global parameters.
-const BUCKET_IMAGES = "photo-analyzer-bucketforimages293beca3-8wxzhryhp9rl";
-const BUCKET_REPORTS = "photo-analyzer-bucketforreports8dc7d870-5e7mmzbgkdxg";
-const EMAIL_SENDER_ADDRESS = "amit.kulkarni@easystartcyber.com.au"; // A verified Amazon SES email address.
+const BUCKET_IMAGES = "BUCKET_IMAGES";
+const BUCKET_REPORTS = "BUCKET_REPORTS";
+const EMAIL_SENDER_ADDRESS = "Sender Email Address"; // A verified Amazon SES email address.
 
 // Load table parameters.
 $(function () {
@@ -199,7 +199,7 @@ const sendEmail = async (bucket, key, linkToCSV) => {
           /* Insert Cc email addresses here. */
         ],
         ToAddresses: [
-          "amit.kulkarni@easystartcyber.com.au", //RECEIVER_ADDRESS
+          "to mail", //RECEIVER_ADDRESS
           /* Insert additional email addresses here.. */
         ],
       },
