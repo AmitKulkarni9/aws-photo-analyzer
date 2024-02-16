@@ -1,0 +1,26 @@
+{
+  "name": "aws-photo-analyzer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "Apache 2.0",
+  "scripts": {
+    "build": "webpack ./js/index.js --mode development --target web --devtool false -o ./js/main.js",
+    "build-cdk": "aws cloudformation create-stack --stack-name STACK_NAME --template-body file://setup.yaml --capabilities CAPABILITY_IAM",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity": "latest",
+    "@aws-sdk/client-iam": "latest",
+    "@aws-sdk/client-rekognition": "latest",
+    "@aws-sdk/client-s3": "latest",
+    "@aws-sdk/client-ses": "latest",
+    "@aws-sdk/credential-provider-cognito-identity": "latest",
+    "jest": "latest",
+    "json-loader": "latest"
+  },
+  "devDependencies": {
+    "webpack": "latest",
+    "webpack-cli": "latest"
+  },
+  "type": "module"
+}
